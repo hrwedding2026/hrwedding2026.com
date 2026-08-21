@@ -352,3 +352,33 @@ footer:before{
   .photos{padding-top:90px !important}
   .photos:before,.photos:after{height:82px;width:52%}
 }
+
+
+/* ===== MRS SAINT DELAFIELD TEST ===== */
+.hero-name{
+  font-family:"Mrs Saint Delafield", cursive !important;
+  font-style:normal !important;
+  font-weight:400 !important;
+  font-size:clamp(4.6rem,6.9vw,6.9rem) !important;
+  line-height:.78 !important;
+  letter-spacing:.005em !important;
+  margin-top:3.6rem !important;
+  margin-bottom:3.35rem !important;
+}
+
+/* Keep supporting romantic text quieter so the names remain the focal point. */
+.script-line{
+  font-family:"Cormorant Garamond", serif !important;
+  font-style:italic !important;
+  font-weight:400 !important;
+}
+
+/* Preserve the intro typography and everything else from the prior corrected version. */
+@media(max-width:700px){
+  .hero-name{
+    font-size:clamp(4rem,17vw,5.45rem) !important;
+    line-height:.8 !important;
+    margin-top:3rem !important;
+    margin-bottom:2.8rem !important;
+  }
+}
