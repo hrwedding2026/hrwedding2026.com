@@ -2,7 +2,6 @@ const body = document.body;
 const intro = document.getElementById('intro');
 const envelope = document.getElementById('envelope');
 const openInvite = document.getElementById('openInvite');
-const skipIntro = document.getElementById('skipIntro');
 
 function finishIntro() {
   intro.classList.add('is-open');
@@ -14,7 +13,6 @@ openInvite.addEventListener('click', () => {
   envelope.classList.add('open');
   setTimeout(finishIntro, 1250);
 });
-skipIntro.addEventListener('click', finishIntro);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
