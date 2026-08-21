@@ -50,7 +50,7 @@ a { color: inherit; }
   clip-path: polygon(0 0,100% 0,50% 100%);
   background:
     linear-gradient(rgba(255,255,255,.83), rgba(255,255,255,.83)),
-    url("assets/envelope-liner-hd.webp") center/cover;
+    url("envelope-liner-hd.webp") center/cover;
   z-index: 1;
 }
 .invitation-card {
@@ -114,7 +114,7 @@ nav a { text-decoration:none; font-size:.72rem; letter-spacing:.11em; text-trans
   min-height:100vh; display:grid; place-items:center; text-align:center;
   background:
     linear-gradient(rgba(255,254,250,.94), rgba(255,254,250,.94)),
-    url("assets/floral-pattern-hd.webp") center/650px;
+    url("floral-pattern-hd.webp") center/650px;
 }
 .hero-content { max-width:820px; }
 .eyebrow {
@@ -165,7 +165,7 @@ h2 { font-size:clamp(3rem,7vw,5.5rem); margin:.2rem 0 2rem; color:var(--forest);
   min-height:75vh; display:grid; place-items:center; text-align:center; color:white;
   background:
     linear-gradient(rgba(48,66,34,.78), rgba(48,66,34,.78)),
-    url("assets/floral-pattern-hd.webp") center/cover fixed;
+    url("floral-pattern-hd.webp") center/cover fixed;
 }
 .dark-panel h2 { color:white; }
 .museum-copy { max-width:760px; }
@@ -331,7 +331,7 @@ input,select,textarea { width:100%; padding:.9rem; border:1px solid #c8cdbd; bac
 .gallery {
   background:
     linear-gradient(rgba(255,254,250,.97), rgba(255,254,250,.97)),
-    url("assets/floral-pattern-hd.webp") center/700px;
+    url("floral-pattern-hd.webp") center/700px;
 }
 .editorial-gallery {
   max-width: 1180px;
@@ -570,129 +570,86 @@ input,select,textarea { width:100%; padding:.9rem; border:1px solid #c8cdbd; bac
   margin-top: .15rem;
 }
 
-/* August 21, 2026 visual polish — invitation-suite integration */
-.intro {
-  background: var(--ivory);
+
+/* August 21 hotfix: HD asset paths + richer invitation-suite styling */
+.invitation-card .couple-names {
+  white-space: nowrap;
+  font-size: clamp(1.35rem, 4.1vw, 2.85rem) !important;
+  line-height: 1 !important;
 }
 
-/* Desktop envelope should feel like stationery, not a billboard. */
-.envelope {
-  width: min(66vw, 540px);
-}
-
-/* The real wax seal is a transparent PNG so it renders reliably on every browser. */
+/* Make the wax seal unmistakably visible and dimensional. */
 .seal {
   width: 92px;
   height: 92px;
-  filter: drop-shadow(0 7px 10px rgba(58, 54, 46, .22));
+  background: #f7f5ef;
+  box-shadow: 0 8px 18px rgba(55, 62, 44, .22);
+  overflow: hidden;
 }
-.seal img,
-.rsvp-seal img {
+.seal img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* Hero: use the actual suite pattern as a soft, continuous paper texture.
-   The old floating corner circles are intentionally retired. */
-.corner { display: none !important; }
+/* Let the actual suite artwork show instead of washing it out almost completely. */
 .hero {
   background:
-    linear-gradient(rgba(255,254,250,.90), rgba(255,254,250,.90)),
-    url("assets/sage-floral-tile.webp") center/430px auto repeat;
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
+    linear-gradient(rgba(255,254,250,.82), rgba(255,254,250,.88)),
+    url("floral-pattern-hd.webp") center/560px;
 }
 
-/* RSVP: remove the heavy green bands and make it feel like a piece of the invitation suite. */
-.rsvp {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  place-items: center;
-  min-height: 85vh;
-  background: var(--ivory);
-}
-.rsvp::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background: url("assets/sage-floral-tile.webp") center/470px auto repeat;
-  opacity: .13;
-}
-.rsvp::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(to bottom, rgba(251,250,245,.72), rgba(251,250,245,.88));
-}
-.rsvp-card {
-  position: relative;
-  width: min(92vw, 780px);
-  max-width: 780px;
-  overflow: hidden;
-  background: rgba(255,254,250,.965);
-  padding: 7.25rem 5rem 5rem;
-  text-align: center;
-  border: 1px solid rgba(64,84,45,.14);
-  box-shadow: 0 20px 55px rgba(53,62,42,.10);
-}
-.rsvp-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
+.gallery {
   background:
-    linear-gradient(to bottom, rgba(255,254,250,.12), rgba(255,254,250,.92)),
-    url("assets/gold-floral-detail.webp") center 53%/cover no-repeat;
-  opacity: .68;
+    linear-gradient(rgba(255,254,250,.88), rgba(255,254,250,.92)),
+    url("floral-pattern-hd.webp") center/620px;
 }
-.rsvp-card > * {
-  position: relative;
-  z-index: 1;
+
+/* Carry the invitation-suite language through the page with soft floral paper. */
+.details,
+.faq {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(255,254,250,.90), rgba(255,254,250,.90)),
+    url("floral-pattern-hd.webp");
+  background-size: auto, 700px;
+  background-position: center;
 }
-.rsvp-card h2 {
-  margin-top: .2rem;
-  margin-bottom: 1.2rem;
-  font-size: clamp(3rem, 7vw, 4.6rem);
+
+.rsvp {
+  background-image:
+    linear-gradient(rgba(247,232,236,.88), rgba(247,232,236,.88)),
+    url("floral-pattern-hd.webp");
+  background-size: auto, 680px;
+  background-position: center;
 }
-.rsvp-card p:not(.eyebrow) {
-  max-width: 610px;
-  margin: 0 auto 2rem;
-  line-height: 1.8;
-}
-.rsvp-seal {
-  width: 86px;
-  margin: 0 auto 1.2rem;
-  filter: drop-shadow(0 6px 10px rgba(58,54,46,.16));
-}
-.rsvp .button {
-  background: var(--sage-deep);
-  border-color: var(--sage-deep);
+
+/* Small decorative floral corners make the design feel like the printed suite,
+   without putting a busy pattern behind every paragraph. */
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 52px;
+  margin: 1.1rem auto 0;
+  background: url("floral-pattern-hd.webp") center/240px;
+  opacity: .34;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);
 }
 
 @media (max-width: 820px) {
-  /* Keep the mobile proportion that already looked right. */
-  .envelope {
-    width: min(88vw, 660px);
+  .invitation-card {
+    width: 82%;
+    left: 9%;
+    padding: 7% 4%;
+  }
+  .invitation-card .couple-names {
+    font-size: clamp(1.18rem, 5vw, 2.25rem) !important;
   }
   .seal {
-    width: 78px;
-    height: 78px;
-  }
-  .rsvp-card {
-    width: min(92vw, 700px);
-    padding: 6.25rem 1.6rem 3.5rem;
-  }
-  .rsvp-card::before {
-    height: 100px;
+    width: 76px;
+    height: 76px;
   }
 }
