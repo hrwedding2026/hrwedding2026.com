@@ -536,4 +536,26 @@ footer:before{
   .hero h1{gap:.12rem !important;}
   .hero-date{margin-top:1.5rem !important;}
 }
-\n\n/* ===== FINAL SPACING + CLEANUP PASS (Aug 21) ===== */\n/* Keep verified Pinyon; only rebalance scale and spacing. */\n.hero-copy{\n  padding-top:4.8rem !important;\n  padding-bottom:4.5rem !important;\n}\n.script-line{\n  margin-top:1rem !important;\n  margin-bottom:2.8rem !important;\n}\n.hero h1{\n  gap:.38rem !important;\n  margin:0 auto !important;\n}\n.hero-name{\n  font-family:\"Pinyon Verified\" !important;\n  font-size:clamp(3.7rem,5.55vw,5.55rem) !important;\n  line-height:1.02 !important;\n}\n.hero-amp{\n  margin:.32rem 0 .36rem !important;\n}\n.hero-date{\n  margin:2.85rem 0 0 !important;\n}\n.countdown-label{\n  margin:1.55rem auto 1.35rem !important;\n}\n.countdown{\n  margin-top:0 !important;\n  margin-bottom:2.35rem !important;\n}\n\n/* Remove accidental X-like trellis fragments from light sections.\n   Trellis remains intentionally on the RSVP section only. */\n.details:before,\n.faq:before{\n  content:none !important;\n  display:none !important;\n}\n\n/* Skip-intro control removed from markup; guard against any stale CSS rendering. */\n.skip-link{display:none !important;}\n\n@media(max-width:700px){\n  .hero-copy{padding-top:3.7rem !important;padding-bottom:3.8rem !important;}\n  .script-line{margin-bottom:2.25rem !important;}\n  .hero-name{\n    font-size:clamp(3.15rem,13.4vw,4.45rem) !important;\n    line-height:1.03 !important;\n  }\n  .hero h1{gap:.3rem !important;}\n  .hero-date{margin-top:2.35rem !important;}\n  .countdown-label{margin-top:1.35rem !important;margin-bottom:1.05rem !important;}\n}\n
+
+
+/* ===== AUGUST 21 POLISH PASS — verified fixes ===== */
+/* Hero: preserve verified Pinyon, reduce scale and create deliberate vertical rhythm. */
+.hero-copy{padding-top:4.8rem !important;padding-bottom:4.65rem !important;}
+.script-line{margin:1rem auto 2.15rem !important;}
+.hero h1{gap:.34rem !important;}
+.hero-name{font-family:"Pinyon Verified" !important;font-size:clamp(3.7rem,5.45vw,5.35rem) !important;line-height:1.02 !important;}
+.hero-amp{margin:.32rem 0 .38rem !important;}
+.hero-date{margin:2.7rem 0 0 !important;}
+.countdown-label{margin:1.55rem auto 1.45rem !important;}
+.countdown{margin-top:.2rem !important;margin-bottom:2.35rem !important;}
+
+/* Remove stray clipped corner decorations from Celebration + FAQ only. */
+.details:before,.details:after,.faq:before,.faq:after{content:none !important;display:none !important;background:none !important;}
+
+@media(max-width:700px){
+ .hero-copy{padding-top:3.75rem !important;padding-bottom:3.7rem !important;}
+ .script-line{margin-bottom:1.75rem !important;}
+ .hero-name{font-size:clamp(3.05rem,13.2vw,4.3rem) !important;line-height:1.03 !important;}
+ .hero-date{margin-top:2.15rem !important;}
+ .countdown-label{margin:1.35rem auto 1.25rem !important;}
+}
