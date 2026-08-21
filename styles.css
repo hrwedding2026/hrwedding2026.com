@@ -356,7 +356,7 @@ footer:before{
 
 /* ===== MRS SAINT DELAFIELD TEST ===== */
 .hero-name{
-  font-family:"Mrs Saint Delafield", cursive !important;
+  font-family:"Monsieur La Doulaise", cursive !important;
   font-style:normal !important;
   font-weight:400 !important;
   font-size:clamp(4.6rem,6.9vw,6.9rem) !important;
@@ -419,7 +419,7 @@ footer:before{
 }
 .hero-name{
   display:block !important;
-  font-family:"Mrs Saint Delafield", cursive !important;
+  font-family:"Monsieur La Doulaise", cursive !important;
   font-size:clamp(3.9rem,5.8vw,5.75rem) !important;
   line-height:.70 !important;
   margin:0 !important;
@@ -453,3 +453,10 @@ footer:before{
   .hero-amp{margin:.38rem 0 .22rem !important}
   .hero-date{margin-top:2rem !important}
 }
+
+/* ===== MONSIEUR LA DOULAISE TYPOGRAPHY ===== */
+.hero h1{gap:0 !important;}
+.hero-name{font-family:"Monsieur La Doulaise",cursive !important;font-size:clamp(4.4rem,6.5vw,6.45rem) !important;line-height:.92 !important;margin:0 !important;}
+.hero-amp{margin:.15rem 0 .05rem !important;}
+.hero-date{margin-top:2.55rem !important;}
+@media(max-width:700px){.hero-name{font-size:clamp(3.7rem,16vw,5rem) !important;line-height:.94 !important}.hero-date{margin-top:2.15rem !important}}
