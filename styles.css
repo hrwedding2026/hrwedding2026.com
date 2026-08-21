@@ -25,131 +25,185 @@ footer{text-align:center;background:var(--deep);color:#fff;padding:4.5rem 2rem}.
 @media(max-width:440px){.hero-copy{padding:3rem 1rem}.hero-name{font-size:clamp(3.1rem,14vw,4rem)}.script-line{font-size:1.6rem}.countdown strong{font-size:1.35rem}.gallery-grid{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
-/* =========================================================
-   Final typography + gallery refinement — Aug 21
-   ========================================================= */
 
-/* Luxury invitation calligraphy for all decorative script moments. */
-.env-name,
-.script-line,
-.hero-name {
-  font-family: "Ballet", cursive !important;
-  font-weight: 400 !important;
+/* ===== FINAL REFINEMENT: restrained editorial hierarchy + subtle trellis ===== */
+:root{
+  --trellis-line: rgba(62,84,47,.075);
+  --trellis-gold: rgba(185,154,88,.13);
 }
 
-/* Envelope prompt: elegant, but unmistakably readable. */
-.tap-note {
-  bottom: 4.8% !important;
-  padding: .5rem 1.35rem .65rem !important;
-  border-bottom: 0 !important;
-  background: transparent !important;
-  color: #2f4128 !important;
-  font-family: "Cormorant Garamond", serif !important;
-  font-size: clamp(1.35rem, 1.7vw, 1.65rem) !important;
-  font-weight: 600 !important;
-  letter-spacing: .075em !important;
-  text-shadow: none !important;
+/* Keep decorative calligraphy elegant and controlled. */
+.script-line{
+  font-family:"Cormorant Garamond",serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(1.55rem,2.15vw,2.15rem);
+  line-height:1.25;
+  letter-spacing:.005em;
+  margin:.9rem auto 3rem;
+  color:#74866a;
 }
-.tap-note::before {
-  content: "✦";
-  display: block;
-  margin: 0 auto .28rem;
-  color: #b8914d;
-  font-size: .72rem;
-  font-style: normal;
-  letter-spacing: 0;
+.hero h1{
+  gap:.12rem;
+  margin:0 auto;
 }
-
-/* Hero: quieter, more proportional, more luxurious. */
-.hero-copy {
-  padding-top: 4.1rem !important;
-  padding-bottom: 4.1rem !important;
+.hero-name{
+  font-family:"Cormorant Garamond",serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(3.65rem,5.35vw,5.45rem);
+  line-height:.88;
+  letter-spacing:-.025em;
 }
-.script-line {
-  font-size: clamp(1.55rem, 2.15vw, 2.15rem) !important;
-  line-height: 1.22 !important;
-  margin: 1rem auto 1.75rem !important;
+.hero-amp{
+  font-size:1.5rem;
+  margin:.2rem 0;
 }
-.hero h1 {
-  gap: .16rem !important;
-}
-.hero-name {
-  font-size: clamp(3.35rem, 5.15vw, 5.15rem) !important;
-  line-height: .98 !important;
-  letter-spacing: .01em;
-}
-.hero-amp {
-  font-size: 1.5rem !important;
-  margin: .2rem 0 !important;
-}
-.hero-date {
-  margin: 2.7rem 0 0 !important;
-}
-.hero-place,
-.garden-rule {
-  display: none !important;
+.hero-date{
+  margin:2.65rem 0 1.4rem;
 }
 
-.countdown-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .9rem;
-  width: min(500px, 100%);
-  margin: 1.35rem auto .6rem;
-  color: #66745d;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.08rem;
-  font-style: italic;
+/* A single coherent typographic scale across sections. */
+.section-title h2,
+.mass-copy h2{
+  font-size:clamp(3.15rem,5vw,4.85rem);
+  line-height:1.02;
 }
-.countdown-label::before,
-.countdown-label::after {
-  content: "";
-  height: 1px;
-  flex: 1;
-  background: rgba(63,84,47,.24);
+.section-title{
+  margin-bottom:3.5rem;
 }
-.countdown {
-  margin-top: 0 !important;
+.kicker{
+  font-size:.62rem;
+  letter-spacing:.24em;
 }
-
-/* Keep the gallery design, but show every photograph exactly as framed. */
-.gallery-grid {
-  align-items: start !important;
+.lede{
+  font-size:1.28rem;
 }
-.gallery-item {
-  height: auto !important;
-  min-height: 0 !important;
-  aspect-ratio: auto !important;
-  overflow: visible !important;
+.event h3{
+  font-size:2rem;
 }
-.gallery-item img {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: none !important;
-  min-height: 0 !important;
-  aspect-ratio: auto !important;
-  object-fit: contain !important;
-  object-position: center !important;
+summary{
+  font-size:1.48rem;
 }
 
-@media (max-width: 900px) {
-  .hero-name {
-    font-size: clamp(3rem, 9.5vw, 4.6rem) !important;
-  }
+/* Requested countdown phrase, treated like invitation typography. */
+.countdown-label{
+  width:min(500px,100%);
+  margin:0 auto .55rem;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  color:#6f8065;
 }
-@media (max-width: 680px) {
-  .tap-note {
-    font-size: 1.25rem !important;
-    bottom: 5.5% !important;
-  }
-  .hero-name {
-    font-size: clamp(2.7rem, 12vw, 3.8rem) !important;
-    white-space: nowrap !important;
-  }
-  .hero-date {
-    margin-top: 2.2rem !important;
-  }
+.countdown-label:before,
+.countdown-label:after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:rgba(62,84,47,.24);
+}
+.countdown-label span{
+  white-space:nowrap;
+  font-family:"Cormorant Garamond",serif;
+  font-style:italic;
+  font-size:1.08rem;
+}
+.countdown{
+  margin-top:0;
+}
+
+/* RSVP: preserve the card, integrate the label instead of a protruding tab. */
+.rsvp-inner{
+  padding-top:3.7rem;
+}
+.rsvp-inner:after{
+  content:"—  R.S.V.P.  —";
+  position:static;
+  display:block;
+  transform:none;
+  padding:0;
+  margin:0 auto 2.45rem;
+  background:transparent;
+  font-family:"Cormorant Garamond",serif;
+  font-style:italic;
+  font-size:1.08rem;
+  letter-spacing:.16em;
+  color:#75866a;
+}
+.rsvp h2{
+  font-size:clamp(3.85rem,6.25vw,5.75rem);
+  line-height:.95;
+}
+
+/* Trellis appears as a quiet wedding-detail reference, never behind body copy. */
+.details,
+.faq{
+  background-color:var(--ivory);
+}
+.details:before,
+.faq:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  width:auto;
+  height:auto;
+  background-image:
+    linear-gradient(45deg, transparent 47%, var(--trellis-line) 48%, var(--trellis-line) 52%, transparent 53%),
+    linear-gradient(-45deg, transparent 47%, var(--trellis-line) 48%, var(--trellis-line) 52%, transparent 53%);
+  background-size:54px 54px;
+  opacity:1;
+  pointer-events:none;
+}
+.details:after,
+.faq:after{
+  display:none;
+}
+.timeline,
+.accordion,
+.section-title{
+  position:relative;
+  z-index:2;
+}
+
+/* One slightly richer trellis moment behind the RSVP stationery. */
+.rsvp{
+  background-color:#354829;
+  background-image:
+    linear-gradient(45deg, transparent 47%, rgba(255,255,255,.035) 48%, rgba(255,255,255,.035) 52%, transparent 53%),
+    linear-gradient(-45deg, transparent 47%, rgba(255,255,255,.035) 48%, rgba(255,255,255,.035) 52%, transparent 53%),
+    linear-gradient(135deg,#354829,#405633);
+  background-size:68px 68px,68px 68px,auto;
+}
+
+/* Keep the intro instruction integrated but readable. */
+.tap-note{
+  font-family:"Cormorant Garamond",serif;
+  font-style:italic;
+  font-size:1.18rem;
+  font-weight:500;
+  letter-spacing:.055em;
+  color:#3e4e34;
+  border:0;
+  background:transparent;
+  text-shadow:none;
+}
+.tap-note:before,
+.tap-note:after{
+  content:"";
+  display:inline-block;
+  width:28px;
+  height:1px;
+  margin:0 .7rem .25rem;
+  background:rgba(62,84,47,.32);
+}
+
+@media (max-width:700px){
+  .script-line{margin-bottom:2.25rem;font-size:1.45rem}
+  .hero-name{font-size:clamp(3.1rem,15vw,4.15rem)}
+  .hero-date{margin-top:2.1rem}
+  .countdown-label span{font-size:1rem}
+  .rsvp-inner{padding-top:3.2rem}
+  .rsvp-inner:after{margin-bottom:2rem}
+  .tap-note{font-size:1.05rem}
+  .tap-note:before,.tap-note:after{width:18px;margin-left:.45rem;margin-right:.45rem}
 }
