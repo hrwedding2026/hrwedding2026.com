@@ -24,3 +24,132 @@ footer{text-align:center;background:var(--deep);color:#fff;padding:4.5rem 2rem}.
 @media(max-width:680px){.section{padding:84px 5vw}.envelope{width:88vw}.wax-seal{width:72px;height:72px}.env-name{font-size:clamp(2rem,9vw,3rem)}.tap-note{bottom:7%;font-size:1.08rem}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:14px}.gallery-item{padding:7px 7px 24px}.hero-name{white-space:normal}.rsvp h2{font-size:clamp(3.5rem,14vw,5rem)}}
 @media(max-width:440px){.hero-copy{padding:3rem 1rem}.hero-name{font-size:clamp(3.1rem,14vw,4rem)}.script-line{font-size:1.6rem}.countdown strong{font-size:1.35rem}.gallery-grid{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* =========================================================
+   Final typography + gallery refinement — Aug 21
+   ========================================================= */
+
+/* Luxury invitation calligraphy for all decorative script moments. */
+.env-name,
+.script-line,
+.hero-name {
+  font-family: "Ballet", cursive !important;
+  font-weight: 400 !important;
+}
+
+/* Envelope prompt: elegant, but unmistakably readable. */
+.tap-note {
+  bottom: 4.8% !important;
+  padding: .5rem 1.35rem .65rem !important;
+  border-bottom: 0 !important;
+  background: transparent !important;
+  color: #2f4128 !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: clamp(1.35rem, 1.7vw, 1.65rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: .075em !important;
+  text-shadow: none !important;
+}
+.tap-note::before {
+  content: "✦";
+  display: block;
+  margin: 0 auto .28rem;
+  color: #b8914d;
+  font-size: .72rem;
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+/* Hero: quieter, more proportional, more luxurious. */
+.hero-copy {
+  padding-top: 4.1rem !important;
+  padding-bottom: 4.1rem !important;
+}
+.script-line {
+  font-size: clamp(1.55rem, 2.15vw, 2.15rem) !important;
+  line-height: 1.22 !important;
+  margin: 1rem auto 1.75rem !important;
+}
+.hero h1 {
+  gap: .16rem !important;
+}
+.hero-name {
+  font-size: clamp(3.35rem, 5.15vw, 5.15rem) !important;
+  line-height: .98 !important;
+  letter-spacing: .01em;
+}
+.hero-amp {
+  font-size: 1.5rem !important;
+  margin: .2rem 0 !important;
+}
+.hero-date {
+  margin: 2.7rem 0 0 !important;
+}
+.hero-place,
+.garden-rule {
+  display: none !important;
+}
+
+.countdown-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .9rem;
+  width: min(500px, 100%);
+  margin: 1.35rem auto .6rem;
+  color: #66745d;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.08rem;
+  font-style: italic;
+}
+.countdown-label::before,
+.countdown-label::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: rgba(63,84,47,.24);
+}
+.countdown {
+  margin-top: 0 !important;
+}
+
+/* Keep the gallery design, but show every photograph exactly as framed. */
+.gallery-grid {
+  align-items: start !important;
+}
+.gallery-item {
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  overflow: visible !important;
+}
+.gallery-item img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+@media (max-width: 900px) {
+  .hero-name {
+    font-size: clamp(3rem, 9.5vw, 4.6rem) !important;
+  }
+}
+@media (max-width: 680px) {
+  .tap-note {
+    font-size: 1.25rem !important;
+    bottom: 5.5% !important;
+  }
+  .hero-name {
+    font-size: clamp(2.7rem, 12vw, 3.8rem) !important;
+    white-space: nowrap !important;
+  }
+  .hero-date {
+    margin-top: 2.2rem !important;
+  }
+}
