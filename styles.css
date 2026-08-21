@@ -559,3 +559,68 @@ footer:before{
  .hero-date{margin-top:2.15rem !important;}
  .countdown-label{margin:1.35rem auto 1.25rem !important;}
 }
+
+
+/* ===== CACHE-BUSTED FINAL HERO + DECOR CLEANUP ===== */
+
+/* More breathing room and slightly smaller names */
+.script-line{
+  margin-bottom:2.75rem !important;
+}
+.hero h1{
+  gap:.7rem !important;
+}
+.hero-name{
+  font-family:"Pinyon Verified","Pinyon Script",cursive !important;
+  font-size:clamp(3.45rem,5vw,4.95rem) !important;
+  line-height:1.08 !important;
+  margin:0 !important;
+}
+.hero-amp{
+  line-height:1 !important;
+  margin:.15rem 0 !important;
+}
+.hero-date{
+  margin:3.15rem 0 0 !important;
+}
+.countdown-label{
+  margin:2rem auto 1.7rem !important;
+}
+.countdown{
+  margin-top:0 !important;
+}
+
+/* Absolutely remove the decorative corner/X artifacts from these two sections. */
+.details::before,
+.details::after,
+.faq::before,
+.faq::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+  background-image:none !important;
+  width:0 !important;
+  height:0 !important;
+  opacity:0 !important;
+}
+
+/* Preserve RSVP trellis — this cleanup does NOT target RSVP. */
+
+@media(max-width:700px){
+  .script-line{
+    margin-bottom:2.25rem !important;
+  }
+  .hero h1{
+    gap:.55rem !important;
+  }
+  .hero-name{
+    font-size:clamp(3rem,12.8vw,4.05rem) !important;
+    line-height:1.08 !important;
+  }
+  .hero-date{
+    margin-top:2.65rem !important;
+  }
+  .countdown-label{
+    margin:1.7rem auto 1.45rem !important;
+  }
+}
