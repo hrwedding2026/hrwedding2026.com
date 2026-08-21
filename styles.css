@@ -207,3 +207,138 @@ summary{
   .tap-note{font-size:1.05rem}
   .tap-note:before,.tap-note:after{width:18px;margin-left:.45rem;margin-right:.45rem}
 }
+
+
+/* ===== FINAL POLISH: calligraphy, RSVP cleanup, intro cohesion, dance-floor accent ===== */
+
+/* Actual connected cursive, but restrained: refined invitation style rather than ornate swashes. */
+.hero-name,
+.script-line,
+.tap-note,
+.intro-copy span,
+.countdown-label span,
+.event-note {
+  font-family: "Parisienne", cursive !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+}
+
+/* Keep the names elegant and proportional. */
+.hero-name{
+  font-size:clamp(3.45rem,4.9vw,5.1rem) !important;
+  line-height:.92 !important;
+  letter-spacing:0 !important;
+}
+.script-line{
+  font-size:clamp(1.45rem,2vw,2rem) !important;
+  line-height:1.35 !important;
+  margin-bottom:3.4rem !important;
+}
+
+/* Intro screen now reads as one coordinated invitation composition. */
+.intro-copy{
+  top:6.5% !important;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.25rem;
+  color:#526246 !important;
+  letter-spacing:0 !important;
+}
+.intro-copy span{
+  font-size:1.55rem;
+  line-height:1;
+}
+.intro-copy small{
+  font-family:"Cormorant Garamond",serif;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.54rem;
+  color:#839278;
+}
+.tap-note{
+  font-size:1.28rem !important;
+  color:#415237 !important;
+  letter-spacing:.02em !important;
+}
+.tap-note:before,
+.tap-note:after{
+  width:24px !important;
+  background:rgba(65,82,55,.30) !important;
+}
+
+/* RSVP card: remove the orphan decorative R.S.V.P. line entirely. */
+.rsvp-inner:after{
+  content:none !important;
+  display:none !important;
+}
+.rsvp-inner{
+  padding-top:3.4rem !important;
+}
+
+/* After-party note should feel celebratory, not administrative. */
+.event-note{
+  font-size:1.15rem !important;
+  color:#718067 !important;
+}
+
+/* Dance-floor floral motif: one subtle warm transition before Photos. */
+.photos{
+  position:relative;
+  padding-top:150px !important;
+}
+.photos:before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:110px;
+  background:
+    linear-gradient(rgba(255,250,242,.80),rgba(255,250,242,.80)),
+    url("assets/dancefloor-floral.webp") center 43% / cover no-repeat;
+  border-top:1px solid rgba(197,161,90,.18);
+  border-bottom:1px solid rgba(197,161,90,.18);
+  pointer-events:none;
+}
+.photos .section-title{
+  position:relative;
+  z-index:2;
+}
+
+/* Repeat the gold/ivory dance-floor linework once more at the footer edge, very faintly. */
+footer{
+  position:relative;
+  margin-top:0;
+}
+footer:before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-70px;
+  height:70px;
+  background:
+    linear-gradient(rgba(255,250,242,.88),rgba(255,250,242,.88)),
+    url("assets/dancefloor-floral.webp") center 66% / cover no-repeat;
+  pointer-events:none;
+}
+
+/* Keep practical typography consistent and subordinate to calligraphy. */
+.hero-date,
+.kicker,
+.event-time,
+.site-header nav a,
+.button{
+  font-size:.64rem !important;
+  letter-spacing:.17em !important;
+}
+
+@media (max-width:700px){
+  .intro-copy span{font-size:1.35rem}
+  .tap-note{font-size:1.1rem !important}
+  .hero-name{font-size:clamp(3rem,13vw,4.15rem) !important}
+  .script-line{margin-bottom:2.6rem !important}
+  .photos{padding-top:125px !important}
+  .photos:before{height:90px}
+}
