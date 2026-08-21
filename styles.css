@@ -466,3 +466,73 @@ footer:before{
 .hero-amp{margin:.28rem 0 .18rem !important;}
 .hero-date{margin-top:2.45rem !important;}
 @media(max-width:700px){.hero-name{font-size:clamp(3.4rem,14.5vw,4.7rem) !important;line-height:1 !important}}
+
+
+/* ===== VERIFIED PINYON SCRIPT LOAD =====
+   Self-identifying family name prevents fallback confusion.
+   Font file served directly from the official SorkinType/Pinyon repository via jsDelivr.
+*/
+@font-face{
+  font-family:"Pinyon Verified";
+  src:url("https://cdn.jsdelivr.net/gh/SorkinType/Pinyon@main/fonts/webfonts/PinyonScript-Regular.woff2") format("woff2");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+
+/* Main invitation names — actual Pinyon Script, not a fallback. */
+.hero h1{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  gap:.18rem !important;
+  margin:0 !important;
+}
+.hero-name{
+  font-family:"Pinyon Verified" !important;
+  font-style:normal !important;
+  font-weight:400 !important;
+  font-size:clamp(4.15rem,6.2vw,6.15rem) !important;
+  line-height:.94 !important;
+  letter-spacing:0 !important;
+  margin:0 !important;
+  white-space:nowrap !important;
+}
+.hero-amp{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:1.45rem !important;
+  line-height:1 !important;
+  margin:.15rem 0 .2rem !important;
+}
+.hero-date{
+  margin:1.85rem 0 .25rem !important;
+}
+
+/* Opening screen header: explicitly two centered lines. */
+.intro-copy{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:.34rem !important;
+  text-align:center !important;
+  white-space:normal !important;
+}
+.intro-copy span,
+.intro-copy small{
+  display:block !important;
+  width:100% !important;
+}
+.intro-copy small{
+  margin:0 !important;
+}
+
+@media(max-width:700px){
+  .hero-name{
+    font-size:clamp(3.45rem,14.8vw,4.8rem) !important;
+    line-height:.96 !important;
+  }
+  .hero h1{gap:.12rem !important;}
+  .hero-date{margin-top:1.5rem !important;}
+}
