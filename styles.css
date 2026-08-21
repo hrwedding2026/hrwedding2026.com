@@ -209,57 +209,70 @@ summary{
 }
 
 
-/* ===== FINAL POLISH: calligraphy, RSVP cleanup, intro cohesion, dance-floor accent ===== */
+/* ===== CALLIGRAPHY CORRECTION PASS =====
+   Reference target: formal invitation calligraphy, connected and delicate.
+   Everything else intentionally left alone.
+*/
 
-/* Actual connected cursive, but restrained: refined invitation style rather than ornate swashes. */
-.hero-name,
-.script-line,
-.tap-note,
-.intro-copy span,
-.countdown-label span,
-.event-note {
-  font-family: "Parisienne", cursive !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-}
-
-/* Keep the names elegant and proportional. */
+/* HERO: actual connected calligraphy, restrained in scale */
 .hero-name{
-  font-size:clamp(3.45rem,4.9vw,5.1rem) !important;
-  line-height:.92 !important;
-  letter-spacing:0 !important;
+  font-family:"Italianno", cursive !important;
+  font-style:normal !important;
+  font-weight:400 !important;
+  font-size:clamp(4.25rem,6.3vw,6.35rem) !important;
+  line-height:.76 !important;
+  letter-spacing:.005em !important;
+  margin-top:3.75rem !important;
+  margin-bottom:3.25rem !important;
 }
-.script-line{
-  font-size:clamp(1.45rem,2vw,2rem) !important;
-  line-height:1.35 !important;
-  margin-bottom:3.4rem !important;
+.hero-name .ampersand,
+.hero-name .amp{
+  font-family:"Cormorant Garamond", serif !important;
+  font-style:italic !important;
+  font-size:.38em !important;
+  vertical-align:.18em;
+  margin:0 .16em;
 }
 
-/* Intro screen now reads as one coordinated invitation composition. */
+/* The invitation sentence coordinates, but does not compete with the names. */
+.script-line{
+  font-family:"Cormorant Garamond", serif !important;
+  font-style:italic !important;
+  font-weight:400 !important;
+  font-size:clamp(1.45rem,2.15vw,2rem) !important;
+  line-height:1.35 !important;
+  letter-spacing:.005em !important;
+  margin-bottom:0 !important;
+}
+
+/* INTRO: restore the quieter pre-polish treatment instead of changing its voice. */
 .intro-copy{
   top:6.5% !important;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:.25rem;
   color:#526246 !important;
-  letter-spacing:0 !important;
+  letter-spacing:.08em !important;
 }
 .intro-copy span{
-  font-size:1.55rem;
-  line-height:1;
+  font-family:"Cormorant Garamond", serif !important;
+  font-style:italic !important;
+  font-weight:500 !important;
+  font-size:1.45rem !important;
+  line-height:1 !important;
 }
 .intro-copy small{
-  font-family:"Cormorant Garamond",serif;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-size:.54rem;
-  color:#839278;
+  font-family:"Cormorant Garamond", serif !important;
+  font-style:normal !important;
+  text-transform:uppercase !important;
+  letter-spacing:.18em !important;
+  font-size:.54rem !important;
+  color:#839278 !important;
 }
 .tap-note{
-  font-size:1.28rem !important;
+  font-family:"Cormorant Garamond", serif !important;
+  font-style:italic !important;
+  font-weight:500 !important;
+  font-size:1.22rem !important;
+  letter-spacing:.055em !important;
   color:#415237 !important;
-  letter-spacing:.02em !important;
 }
 .tap-note:before,
 .tap-note:after{
@@ -267,7 +280,7 @@ summary{
   background:rgba(65,82,55,.30) !important;
 }
 
-/* RSVP card: remove the orphan decorative R.S.V.P. line entirely. */
+/* RSVP: keep the card, remove the stray decorative R.S.V.P. completely. */
 .rsvp-inner:after{
   content:none !important;
   display:none !important;
@@ -276,69 +289,66 @@ summary{
   padding-top:3.4rem !important;
 }
 
-/* After-party note should feel celebratory, not administrative. */
+/* After-party wording remains polished and subordinate. */
 .event-note{
-  font-size:1.15rem !important;
-  color:#718067 !important;
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:1.08rem !important;
 }
 
-/* Dance-floor floral motif: one subtle warm transition before Photos. */
+/* Fix the broken floral transition: no rectangular image strip.
+   Use the floral artwork only as a faint, edge-faded decorative wash. */
 .photos{
   position:relative;
-  padding-top:150px !important;
+  padding-top:110px !important;
+  overflow:hidden;
 }
 .photos:before{
   content:"";
   position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  height:110px;
-  background:
-    linear-gradient(rgba(255,250,242,.80),rgba(255,250,242,.80)),
-    url("assets/dancefloor-floral.webp") center 43% / cover no-repeat;
-  border-top:1px solid rgba(197,161,90,.18);
-  border-bottom:1px solid rgba(197,161,90,.18);
+  top:8px;
+  left:-3%;
+  width:42%;
+  height:105px;
+  background:url("assets/dancefloor-floral.webp") left 44% / 185% auto no-repeat;
+  opacity:.16;
+  -webkit-mask-image:linear-gradient(to right, #000 0%, #000 45%, transparent 100%);
+  mask-image:linear-gradient(to right, #000 0%, #000 45%, transparent 100%);
   pointer-events:none;
+  border:0 !important;
 }
-.photos .section-title{
-  position:relative;
-  z-index:2;
-}
-
-/* Repeat the gold/ivory dance-floor linework once more at the footer edge, very faintly. */
-footer{
-  position:relative;
-  margin-top:0;
-}
-footer:before{
+.photos:after{
   content:"";
   position:absolute;
-  left:0;
-  right:0;
-  top:-70px;
-  height:70px;
-  background:
-    linear-gradient(rgba(255,250,242,.88),rgba(255,250,242,.88)),
-    url("assets/dancefloor-floral.webp") center 66% / cover no-repeat;
+  top:8px;
+  right:-3%;
+  width:42%;
+  height:105px;
+  background:url("assets/dancefloor-floral.webp") right 60% / 185% auto no-repeat;
+  opacity:.12;
+  -webkit-mask-image:linear-gradient(to left, #000 0%, #000 45%, transparent 100%);
+  mask-image:linear-gradient(to left, #000 0%, #000 45%, transparent 100%);
   pointer-events:none;
 }
 
-/* Keep practical typography consistent and subordinate to calligraphy. */
-.hero-date,
-.kicker,
-.event-time,
-.site-header nav a,
-.button{
-  font-size:.64rem !important;
-  letter-spacing:.17em !important;
+/* Remove the second floral block near footer; one restrained use is enough. */
+footer:before{
+  content:none !important;
+  display:none !important;
 }
 
-@media (max-width:700px){
-  .intro-copy span{font-size:1.35rem}
-  .tap-note{font-size:1.1rem !important}
-  .hero-name{font-size:clamp(3rem,13vw,4.15rem) !important}
-  .script-line{margin-bottom:2.6rem !important}
-  .photos{padding-top:125px !important}
-  .photos:before{height:90px}
+@media(max-width:700px){
+  .hero-name{
+    font-size:clamp(3.75rem,16vw,5.15rem) !important;
+    line-height:.78 !important;
+    margin-top:3rem !important;
+    margin-bottom:2.65rem !important;
+  }
+  .script-line{
+    font-size:1.35rem !important;
+  }
+  .intro-copy span{font-size:1.25rem !important}
+  .tap-note{font-size:1.08rem !important}
+  .photos{padding-top:90px !important}
+  .photos:before,.photos:after{height:82px;width:52%}
 }
