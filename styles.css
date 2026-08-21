@@ -50,7 +50,7 @@ a { color: inherit; }
   clip-path: polygon(0 0,100% 0,50% 100%);
   background:
     linear-gradient(rgba(255,255,255,.83), rgba(255,255,255,.83)),
-    url("assets/floral-pattern.jpeg") center/cover;
+    url("assets/envelope-liner-hd.webp") center/cover;
   z-index: 1;
 }
 .invitation-card {
@@ -114,7 +114,7 @@ nav a { text-decoration:none; font-size:.72rem; letter-spacing:.11em; text-trans
   min-height:100vh; display:grid; place-items:center; text-align:center;
   background:
     linear-gradient(rgba(255,254,250,.94), rgba(255,254,250,.94)),
-    url("assets/floral-pattern.jpeg") center/650px;
+    url("assets/floral-pattern-hd.webp") center/650px;
 }
 .hero-content { max-width:820px; }
 .eyebrow {
@@ -165,7 +165,7 @@ h2 { font-size:clamp(3rem,7vw,5.5rem); margin:.2rem 0 2rem; color:var(--forest);
   min-height:75vh; display:grid; place-items:center; text-align:center; color:white;
   background:
     linear-gradient(rgba(48,66,34,.78), rgba(48,66,34,.78)),
-    url("assets/floral-pattern.jpeg") center/cover fixed;
+    url("assets/floral-pattern-hd.webp") center/cover fixed;
 }
 .dark-panel h2 { color:white; }
 .museum-copy { max-width:760px; }
@@ -331,7 +331,7 @@ input,select,textarea { width:100%; padding:.9rem; border:1px solid #c8cdbd; bac
 .gallery {
   background:
     linear-gradient(rgba(255,254,250,.97), rgba(255,254,250,.97)),
-    url("assets/floral-pattern.jpeg") center/700px;
+    url("assets/floral-pattern-hd.webp") center/700px;
 }
 .editorial-gallery {
   max-width: 1180px;
@@ -533,4 +533,39 @@ input,select,textarea { width:100%; padding:.9rem; border:1px solid #c8cdbd; bac
   height: auto !important;
   max-height: none !important;
   object-fit: contain !important;
+}
+
+
+/* August 2026 content + mobile refinement */
+.name-nowrap { white-space: nowrap; }
+
+@media (max-width: 820px) {
+  .envelope {
+    width: min(88vw, 660px);
+    aspect-ratio: 1.45 / 1;
+    height: auto;
+    max-height: 62vh;
+  }
+
+  .hero .script-name {
+    font-size: clamp(3rem, 12.2vw, 4.6rem) !important;
+    width: 100%;
+  }
+
+  .name-lockup {
+    width: 100%;
+    max-width: 94vw;
+  }
+}
+
+@media (max-width: 390px) {
+  .envelope { width: 86vw; }
+  .hero .script-name {
+    font-size: clamp(2.8rem, 11.6vw, 4.1rem) !important;
+  }
+}
+
+.faq .text-link {
+  display: inline-block;
+  margin-top: .15rem;
 }
