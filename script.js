@@ -65,6 +65,11 @@ function searchScreen(message = '') {
 }
 
 async function api(path, options = {}) {
+  // Demo preview works even when the site is hosted on GitHub/Cloudflare before the private backend is deployed.
+  if (path === '/lookup') {
+    const previewName = (JSON.parse(options.body || '{}').name || '').trim().toLowerCase();
+    if (previewName === 'demo guest' || previewName === 'demo') return demoApi(path, options);
+  }
   if (localDemo) return demoApi(path, options);
   const response = await fetch(`/api/rsvp${path}`, {
     headers: {'Content-Type':'application/json', ...(options.headers || {})},
@@ -79,7 +84,7 @@ async function demoApi(path, options) {
   await new Promise(r => setTimeout(r, 250));
   if (path === '/lookup') {
     const name = JSON.parse(options.body || '{}').name || '';
-    if (name.trim().toLowerCase() !== 'demo guest') {
+    if (!['demo guest','demo'].includes(name.trim().toLowerCase())) {
       const err = new Error('We couldn’t find an invitation under that name. Please enter the name exactly as printed on the envelope. For a local preview, search “Demo Guest”.');
       throw err;
     }
