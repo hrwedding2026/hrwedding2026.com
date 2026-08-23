@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italiana&family=Montserrat:wght@300;400;500&family=Italianno&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260823-rsvp2" />
+  <link rel="stylesheet" href="styles.css?v=20260823-finalcleanup" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
@@ -117,7 +117,7 @@
         <p class="kicker">Kindly reply by</p>
         <h2>September 18</h2>
         <p class="rsvp-year">2026</p>
-        <button class="button light" id="openRsvp">RSVP Now</button>
+        <button class="button light" id="demoRsvp">Preview RSVP</button>
       </div>
     </section>
 
@@ -132,6 +132,8 @@
             <span>01</span>
             <h3>What to expect</h3>
             <p>The ceremony will be a full Catholic Nuptial Mass and will last approximately 60–75 minutes.</p>
+              <p>If this is your first Catholic wedding, <strong>no preparation is needed</strong> — simply follow along and participate however you feel comfortable. If you’d like a little preview, we found this short video helpful.</p>
+              <p><a href="https://youtu.be/VmOEo0Hasi4?si=j-eE6eN5OLUlMW0A" target="_blank" rel="noopener">Watch: What to Expect at a Catholic Wedding →</a></p>
           </div>
           <div>
             <span>02</span>
@@ -158,8 +160,13 @@
       <div class="accordion reveal">
         <details>
           <summary>What should I wear?</summary>
-          <p><strong>Black tie optional — with a touch of whimsy!</strong> Think colorful spring or summer garden party, just in October. We encourage you to embrace color, florals, and elegant, playful details. That special dress or suit you've been saving for the perfect occasion? This is it! Above all, wear something that makes you feel your best and ready to celebrate with us.</p>
-          <p>As our ceremony will take place in a Catholic church, we kindly ask that your attire be respectful of the sacred setting. We also ask that white and ivory be reserved for the bride.</p>
+          <p><strong>Black tie optional — with a touch of whimsy!</strong> Think spring garden party elegance, just in October. Ladies, we invite you to wear floor-length gowns in colorful solids, florals, or romantic prints. Gentlemen, a tuxedo or formal suit is perfect — black, navy, and grey are classic choices, though other colors are welcome. Feel free to have fun with color and playful details throughout your look.</p>
+          <p>As our ceremony will take place in a Catholic church, we kindly ask that attire be respectful of the sacred setting. We also ask that white and ivory be reserved for the bride.</p>
+          <div class="dress-inspo">
+            <p class="dress-inspo-title">Need a little inspiration?</p>
+            <p class="dress-inspo-note">A few looks that capture the spirit of our celebration. These are <strong>for inspiration only — not a dress-code checklist.</strong> Choose a look that feels like you!</p>
+            <img src="assets/dress-code-inspiration.webp" alt="Wedding attire inspiration mood board">
+          </div>
         </details>
 
         <details>
@@ -169,9 +176,11 @@
 
         <details>
           <summary>What should I do between the Mass and reception?</summary>
-          <p>Like many Catholic weddings, there will be a little <strong>“Catholic gap”</strong> between the Nuptial Mass and cocktail hour. You're welcome to use this time to explore the Dallas Museum of Art before the reception begins.</p>
-          <p>General museum admission is complimentary, but the museum asks visitors to reserve a free admission ticket. This ticket is only for visiting the museum during the gap and is <strong>not required for our wedding reception.</strong></p>
+          <p>Like many Catholic weddings, there will be a little <strong>“Catholic gap”</strong> between the Nuptial Mass and cocktail hour. <strong>This time is yours to enjoy however you’d like!</strong> Feel free to relax, head back to your hotel, grab a drink, or explore a little before joining us again at 6:00 PM.</p>
+          <p>The drive from the church to the Dallas Museum of Art is approximately <strong>35–45 minutes, depending on traffic</strong>, so be sure to leave yourself enough time to make your way to Dallas.</p>
+          <p>If you’d like to explore the Dallas Museum of Art, general admission is complimentary and the museum is open until <strong>5:00 PM</strong>. Just keep in mind that cocktail hour begins at <strong>6:00 PM</strong>, and guests will not be admitted to our reception space before then.</p>
           <p><a href="https://dma.org/visit" target="_blank" rel="noopener">Reserve free museum admission</a></p>
+          <p>And <strong>come hungry — there will be plenty waiting for you at cocktail hour and dinner!</strong></p>
         </details>
 
         <details>
@@ -181,7 +190,7 @@
         </details>
 
         <details>
-          <summary>Are children and plus-ones invited?</summary>
+          <summary>Can I bring my children or a plus-one?</summary>
           <p>Yes! Children and plus-ones have already been included in our guest count. When you RSVP, you'll see everyone included with your invitation. We kindly ask that you RSVP for each guest who will be attending so we can plan accordingly.</p>
         </details>
 
@@ -205,7 +214,7 @@
         <figure class="gallery-item reveal"><img src="assets/final-06-opera-walk.webp" alt="Huyen and Ryan walking together"></figure>
         <figure class="gallery-item reveal"><img src="assets/final-02-aodai.webp" alt="Huyen and Ryan in traditional attire"></figure>
         <figure class="gallery-item reveal"><img src="assets/final-04-museum.webp" alt="Huyen and Ryan at a museum"></figure>
-        <figure class="gallery-item reveal"><img src="assets/final-01-proposal.webp" alt="Huyen and Ryan together"></figure>
+        <figure class="gallery-item reveal"><img src="assets/final-01-aodai-portrait.webp" alt="Huyen and Ryan together"></figure>
       </div>
     </section>
   </main>
@@ -216,11 +225,17 @@
     <small>We can't wait to celebrate with you.</small>
   </footer>
 
-  <dialog id="rsvpDialog" class="rsvp-dialog">
-    <button class="dialog-close" id="closeDialog" aria-label="Close RSVP">×</button>
-    <div id="rsvpApp" aria-live="polite"></div>
+  <dialog id="rsvpDialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Close">×</button>
+    <p class="kicker">RSVP preview</p>
+    <h2>Find your invitation</h2>
+    <p>This is still the design preview. Next, we'll connect this to your actual guest list and reserved party sizes.</p>
+    <label>Guest name
+      <input type="text" placeholder="Start typing a first or last name" />
+    </label>
+    <button class="button" type="button">Search</button>
   </dialog>
 
-  <script src="script.js?v=20260823-rsvp2"></script>
+  <script src="script.js?v=20260823-finalcleanup"></script>
 </body>
 </html>
