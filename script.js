@@ -55,7 +55,7 @@ function searchScreen(message = '') {
         <form id="rsvpSearchForm" class="rsvp-search-form">
           <label for="rsvpSearchName">Name on invitation envelope</label>
           <input id="rsvpSearchName" name="name" type="text" autocomplete="name" placeholder="First & Last Name" required />
-          <p class="rsvp-helper">Having trouble? Double-check the name printed on your envelope.</p>
+          <p class="rsvp-helper">Please enter your name exactly as it appears on your invitation envelope.</p>
           ${message ? `<p class="rsvp-message rsvp-error">${esc(message)}</p>` : ''}
           <button class="button" type="submit">Find My Invitation</button>
         </form>
@@ -76,7 +76,7 @@ async function api(path, options = {}) {
     ...options
   });
   const payload = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(payload.message || 'Something went wrong. Please try again.');
+  if (!response.ok) throw new Error(payload.message || 'We couldn’t find that name. Please double-check the name exactly as it appears on your invitation envelope.');
   return payload;
 }
 
@@ -85,7 +85,7 @@ async function demoApi(path, options) {
   if (path === '/lookup') {
     const name = JSON.parse(options.body || '{}').name || '';
     if (!['demo guest','demo'].includes(name.trim().toLowerCase())) {
-      const err = new Error('We couldn’t find an invitation under that name. Please enter the name exactly as printed on the envelope. For a local preview, search “Demo Guest”.');
+      const err = new Error('We couldn’t find that name. Please double-check the name exactly as it appears on your invitation envelope.');
       throw err;
     }
     return {invitation:{token:'demo',displayName:'Demo Guest',reservedSeats:3,guest1Prefill:'Demo Guest',specialType:null},rsvp:null};
