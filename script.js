@@ -55,7 +55,6 @@ function searchScreen(message = '') {
         <form id="rsvpSearchForm" class="rsvp-search-form">
           <label for="rsvpSearchName">Name on invitation envelope</label>
           <input id="rsvpSearchName" name="name" type="text" autocomplete="name" placeholder="First & Last Name" required />
-          <p class="rsvp-helper">Please enter your name exactly as it appears on your invitation envelope.</p>
           ${message ? `<p class="rsvp-message rsvp-error">${esc(message)}</p>` : ''}
           <button class="button" type="submit">Find My Invitation</button>
         </form>
