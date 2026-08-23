@@ -692,3 +692,6 @@ footer:before{
   .review-row{grid-template-columns:78px 1fr}
   .rsvp-actions{flex-direction:column-reverse;gap:1rem}
 }
+
+/* RSVP search cleanup: helper instruction is intentionally shown only in the intro. */
+.rsvp-search-form .rsvp-helper{display:none !important;}
