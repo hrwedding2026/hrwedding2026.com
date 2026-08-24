@@ -671,3 +671,20 @@ footer:before{
   text-decoration: underline;
   text-underline-offset: .18em;
 }
+
+
+/* ===== FINAL FINAL CLEANUP — 2026-08-23 ===== */
+@media (min-width: 769px){
+  .dress-inspo img{
+    width: min(72%, 900px) !important;
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media (max-width: 768px){
+  .dress-inspo img{
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
