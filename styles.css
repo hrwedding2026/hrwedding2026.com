@@ -688,3 +688,81 @@ footer:before{
     max-width: none !important;
   }
 }
+
+/* ===== RSVP EXPERIENCE ===== */
+.rsvp-dialog{width:min(94vw,760px);max-height:92vh;overflow:auto;padding:0;border:0;background:#fffaf2;border-radius:2px;box-shadow:0 32px 110px rgba(16,25,12,.34)}
+.rsvp-dialog::backdrop{background:rgba(27,38,22,.68);backdrop-filter:blur(5px)}
+.rsvp-dialog .dialog-close{position:sticky;z-index:8;float:right;right:16px;top:12px;width:42px;height:42px;border-radius:50%;background:rgba(255,250,242,.94);color:var(--green);font-family:"Cormorant Garamond",serif;font-size:2rem;line-height:1;box-shadow:0 4px 18px rgba(41,56,33,.08)}
+.rsvp-screen{position:relative;padding:4.8rem 4.6rem 4.4rem;text-align:center;background:linear-gradient(180deg,#fffdf8,#fffaf2)}
+.rsvp-screen:before{content:"";position:absolute;inset:15px;border:1px solid rgba(185,154,88,.32);pointer-events:none}
+.rsvp-screen>.kicker{margin-top:0}
+.rsvp-screen h2{font-family:"Italiana",serif;font-weight:400;color:var(--green);font-size:clamp(2.35rem,5vw,4rem);line-height:1.08;margin:.45rem auto 1rem;max-width:620px}
+.rsvp-intro{max-width:580px;margin:0 auto 2rem;font-family:"Cormorant Garamond",serif;font-size:1.25rem;line-height:1.55;color:#55604d}
+.rsvp-search-form{max-width:500px;margin:2.1rem auto 0;display:grid;gap:.85rem;text-align:left}
+.rsvp-search-form>label,.rsvp-notes-wrap>label,.guest-details label{font-size:.63rem;text-transform:uppercase;letter-spacing:.12em;font-weight:500;color:#56634f}
+.rsvp-search-form input,.guest-details input,.rsvp-notes-wrap textarea{width:100%;padding:1rem 1.05rem;border:1px solid #c7cec0;background:#fffdf9;color:var(--ink);font:300 .95rem/1.4 "Montserrat",sans-serif;border-radius:0;outline:none}
+.rsvp-search-form input:focus,.guest-details input:focus,.rsvp-notes-wrap textarea:focus{border-color:#829373;box-shadow:0 0 0 3px rgba(130,147,115,.12)}
+.rsvp-search-form .button{justify-self:center;margin-top:.65rem}
+.rsvp-helper{margin:0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1rem;color:#788272;text-align:center}
+.rsvp-message{max-width:560px;margin:1rem auto;font-size:.8rem;line-height:1.5}
+.rsvp-error{color:#8a403c}
+.rsvp-status{max-width:560px;margin:0 auto 1.6rem;padding:.8rem 1rem;background:#edf1e8;border:1px solid rgba(62,84,47,.12);font-family:"Cormorant Garamond",serif;font-size:1.05rem;color:#53614b}
+.rsvp-text-button{border:0;background:none;color:#66755c;text-decoration:underline;text-underline-offset:4px;cursor:pointer;font-family:"Cormorant Garamond",serif;font-size:1rem;padding:.25rem}
+.rsvp-screen>.rsvp-text-button:first-child{display:block;margin:-1.2rem 0 2.2rem;text-align:left}
+.reserved-seats{display:flex;align-items:center;justify-content:center;gap:.65rem;flex-wrap:wrap;margin:1.65rem auto 1.2rem;font-family:"Cormorant Garamond",serif;font-size:1.3rem;color:#596552}
+.reserved-seats strong{display:inline-grid;place-items:center;min-width:54px;height:54px;padding:0 14px;border:1px solid rgba(185,154,88,.62);font-family:"Italiana",serif;font-size:2rem;font-weight:400;color:var(--green);background:#fffdf8}
+.guest-list{display:grid;gap:1rem;margin:2rem auto;max-width:620px;text-align:left}
+.guest-card{border:1px solid rgba(62,84,47,.16);background:rgba(255,255,255,.64);padding:1.55rem 1.6rem 1.6rem}
+.guest-card-heading{display:flex;align-items:center;gap:1rem;margin-bottom:.5rem}
+.guest-card-heading:after{content:"";height:1px;background:rgba(185,154,88,.35);flex:1}
+.guest-card-heading span{font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:500;color:var(--green)}
+.guest-card>p{margin:.5rem 0 1rem;font-family:"Cormorant Garamond",serif;font-size:1.12rem;color:#596552}
+.attendance-options{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+.attendance-options label{position:relative;cursor:pointer}
+.attendance-options input{position:absolute;opacity:0;pointer-events:none}
+.attendance-options span{display:grid;place-items:center;min-height:50px;padding:.65rem;border:1px solid #c8cec1;background:#fffdf9;text-align:center;text-transform:uppercase;letter-spacing:.08em;font-size:.57rem;font-weight:500;color:#5c6854;transition:.2s ease}
+.attendance-options input:checked+span{background:var(--green);border-color:var(--green);color:white;box-shadow:0 5px 14px rgba(62,84,47,.12)}
+.guest-details{display:grid;grid-template-rows:0fr;opacity:0;overflow:hidden;transition:grid-template-rows .3s ease,opacity .25s ease,margin .3s ease;margin-top:0}
+.guest-details.is-visible{grid-template-rows:1fr;opacity:1;margin-top:1.2rem;overflow:visible}
+.guest-details>*{min-height:0}
+.guest-details label{display:grid;gap:.45rem;margin-top:.8rem}
+.guest-details label span,.rsvp-notes-wrap label span{font-family:"Cormorant Garamond",serif;font-size:.88rem;letter-spacing:0;text-transform:none;font-style:italic;font-weight:400;color:#80887b}
+.rsvp-notes-wrap{max-width:620px;margin:2rem auto;text-align:left;display:grid;gap:.55rem}
+.rsvp-notes-wrap textarea{resize:vertical;min-height:92px}
+.rsvp-review .rsvp-intro{margin-bottom:1.5rem}
+.review-list{max-width:600px;margin:1.7rem auto;text-align:left;border-top:1px solid rgba(62,84,47,.16)}
+.review-row{display:grid;grid-template-columns:95px 1fr;gap:.25rem 1rem;padding:1rem .3rem;border-bottom:1px solid rgba(62,84,47,.16)}
+.review-row .review-seat{text-transform:uppercase;letter-spacing:.1em;font-size:.57rem;color:#77816f;padding-top:.18rem}
+.review-row strong{font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:500;color:var(--green)}
+.review-row small{grid-column:2;font-size:.7rem;color:#6b7564}
+.review-note{max-width:600px;margin:1.4rem auto 2rem;text-align:left;padding:1rem 1.1rem;background:#f3f0e8}
+.review-note span{text-transform:uppercase;letter-spacing:.1em;font-size:.57rem;color:#77816f}
+.review-note p{margin:.35rem 0 0;font-family:"Cormorant Garamond",serif;font-size:1.05rem;line-height:1.5}
+.rsvp-actions{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:2rem}
+.rsvp-confirmation{min-height:470px;display:grid;place-content:center}
+.confirmation-mark{font-family:"Cormorant Garamond",serif;font-size:3rem;color:#839676;margin-bottom:.4rem}
+.rsvp-confirmation .button{justify-self:center;margin-top:.5rem}
+.special-card{max-width:560px;margin:2rem auto}
+.rsvp-dialog button:disabled{opacity:.58;cursor:wait}
+@media(max-width:680px){
+  .rsvp-dialog{width:96vw;max-height:94vh}
+  .rsvp-screen{padding:4.4rem 1.55rem 3.4rem}
+  .rsvp-screen:before{inset:9px}
+  .rsvp-screen h2{font-size:clamp(2.15rem,9vw,3rem)}
+  .rsvp-intro{font-size:1.12rem}
+  .attendance-options{grid-template-columns:1fr}
+  .guest-card{padding:1.3rem 1.05rem}
+  .review-row{grid-template-columns:78px 1fr}
+  .rsvp-actions{flex-direction:column-reverse;gap:1rem}
+}
+
+/* RSVP search cleanup: helper instruction is intentionally shown only in the intro. */
+.rsvp-search-form .rsvp-helper{display:none !important;}
+
+/* Confirmation border fix: keep the sticky close button out of the RSVP screen's float layout. */
+.rsvp-dialog .dialog-close{
+  float:none;
+  display:block;
+  margin-left:auto;
+  margin-bottom:-42px;
+}
