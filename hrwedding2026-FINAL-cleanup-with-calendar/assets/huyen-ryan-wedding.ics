@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Huyen and Ryan Wedding//Wedding Day//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:huyen-ryan-wedding-20261024@hrwedding2026.com
+DTSTAMP:20260901T180000Z
+DTSTART;TZID=America/Chicago:20261024T140000
+DTEND;TZID=America/Chicago:20261024T235900
+SUMMARY:Huyen & Ryan's Wedding
+LOCATION:Christ the King Catholic Church\, 1112 Eagle Drive\, Fort Worth\, TX 76111
+DESCRIPTION:2:00 PM — Nuptial Mass\nChrist the King Catholic Church\n1112 Eagle Drive\, Fort Worth\, TX 76111\n\n6:00 PM — Cocktail Hour & Reception\nDallas Museum of Art — Sculpture Garden\n1717 N Harwood St\, Dallas\, TX 75201\n\n10:30 PM — After Party\nKILO Coffee\n6600 Snider Plaza\, Dallas\, TX 75205
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
