@@ -766,3 +766,80 @@ footer:before{
   margin-left:auto;
   margin-bottom:-42px;
 }
+
+
+/* ===== Wedding-day calendar add ===== */
+.calendar-add{
+  position:relative;
+  z-index:2;
+  margin:2.4rem auto 0;
+  text-align:center;
+}
+.calendar-add-label{
+  margin:0 0 .55rem;
+  font-family:"Cormorant Garamond",serif;
+  font-style:italic;
+  font-size:1.02rem;
+  color:#6d7b64;
+}
+.calendar-menu{
+  display:inline-block;
+  position:relative;
+}
+.calendar-menu > summary{
+  list-style:none;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:230px;
+  padding:.9rem 1.3rem;
+  border:1px solid rgba(64,85,51,.34);
+  border-radius:999px;
+  background:rgba(255,253,248,.88);
+  color:#405533;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-family:"Montserrat",sans-serif;
+  font-size:.62rem;
+  font-weight:500;
+}
+.calendar-menu > summary::-webkit-details-marker{display:none}
+.calendar-menu > summary::after{
+  content:"＋";
+  margin-left:.65rem;
+  font-size:.9rem;
+  line-height:1;
+}
+.calendar-menu[open] > summary::after{content:"−"}
+.calendar-menu-options{
+  position:absolute;
+  left:50%;
+  top:calc(100% + .65rem);
+  transform:translateX(-50%);
+  width:220px;
+  padding:.45rem;
+  background:#fffdf8;
+  border:1px solid rgba(64,85,51,.16);
+  box-shadow:0 14px 34px rgba(64,85,51,.12);
+  border-radius:12px;
+  z-index:10;
+}
+.calendar-menu-options a{
+  display:block;
+  padding:.75rem .85rem;
+  text-decoration:none;
+  color:#405533;
+  font-size:.78rem;
+}
+.calendar-menu-options a:hover{
+  background:rgba(220,229,205,.45);
+}
+@media(max-width:700px){
+  .calendar-add{margin-top:1.8rem}
+  .calendar-menu-options{
+    position:static;
+    transform:none;
+    margin:.6rem auto 0;
+  }
+}
