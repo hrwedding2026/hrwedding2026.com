@@ -35,7 +35,7 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 // ===== RSVP =====
 const dialog = document.getElementById('rsvpDialog');
 const rsvpApp = document.getElementById('rsvpApp');
-const RSVP_DEADLINE = new Date('2026-09-19T23:59:59-05:00');
+const RSVP_DEADLINE = new Date('2026-09-18T23:59:59-05:00');
 const RSVP_API_BASE = 'https://hrwedding-rsvp.hrwedding2026-a3c.workers.dev';
 const localDemo = location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
 let rsvpState = null;
